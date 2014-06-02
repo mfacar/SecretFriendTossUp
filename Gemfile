@@ -38,12 +38,22 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
+#web and style
+gem 'twitter-bootstrap-rails'
+gem 'thin'
+gem 'jquery-turbolinks'
+gem 'jquery-validation-rails'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'shoulda-matchers'
+  gem 'pry'
+  gem 'pry-debugger'
 end
 
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
