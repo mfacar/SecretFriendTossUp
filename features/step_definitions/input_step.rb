@@ -3,18 +3,20 @@ Given(/^I am on (.+)$/) do |page_name|
   @session.visit '/'
 end
 
-Given(/^I fill in "(.*?)" for "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+Given(/^I enter the data for "(.*?)" with mail "(.*?)"$/) do |name, email|
+  @session.fill_in("name", :with => name)
+  @session.fill_in("email", :with => email)
 end
 
 When(/^I add the player$/) do
-  pending # express the regexp above with the code you wish you had
+  @session.click_button("addPlayerBtn")
 end
 
-Then(/^"(.*?)" should be part of the players$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^"(.*?)" should be part of the players$/) do |name|
+  firstPlayer = @session.find('#playersList>tbody>tr').text
+  firstPlayer.should have_text(name)
 end
 
 Then(/^I should be able to input another player$/) do
-  pending # express the regexp above with the code you wish you had
+  @session.find_field('name').should have_text('')
 end

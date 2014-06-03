@@ -2,10 +2,29 @@
 <div ng-controller="PlayerCtrl">
 
 <p>Crea tu intercambio de regalos!</p>
-  <ul>
-    <li ng-repeat="phone in phones">
-      {{phone.name}}
-      <p>{{phone.snippet}}</p>
-    </li>
-  </ul>
+
+<form ng-submit="AddPlayer()">
+  	Nombre: <input name="name" ng-model="currentPlayer.name">
+  	Correo: <input name="email" ng-model="currentPlayer.email">
+	<input id="addPlayerBtn" name="addPlayerBtn" type="submit" value="Añadir" />
+</form>
+
+<div class="row">
+ <div class="span6">
+  <h3>Jugadores</h3>
+  <table id="playersList" class="table"> 
+	<thead> 
+		<tr>
+			<th>Nombre</th>
+			<th>Correo</th>
+		</tr>
+	</thead> 
+	<tbody>
+		<tr ng-repeat="player in players"><td>{{player.name}}</td><td>{{player.email}}</td></tr>
+	</tbody>
+  </table> 
+ </div>	
 </div>
+</div>
+
+

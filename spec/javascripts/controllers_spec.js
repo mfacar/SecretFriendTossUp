@@ -16,5 +16,14 @@ describe('secretFriendApp controllers', function() {
   	it('players should be empty', function() {  		
     	expect(scope.players).toEqual([]);
   	});
+
+  	describe('AddPlayer', function(){
+  		it('should add a new player to the list', function() {
+          scope.currentPlayer = {name: 'Maria', email: 'Maria@mail.com'};
+          scope.AddPlayer();
+          expect(scope.players).toContain({name: 'Maria', email: 'Maria@mail.com'});
+          expect(scope.currentPlayer).toEqual({name:'', email:''});
+      });
+  	});  	
  });
 });

@@ -5,8 +5,7 @@ Feature: Input of Players
 
   Scenario: Input of players
     Given I am on the "home_page"
-    And I fill in "Juan" for "Player Name" 
-    And I fill in "juan@mail.com" for "Player Email" 
+    And I enter the data for "Juan" with mail "juan@mail.com" 
     When I add the player
     Then "Juan" should be part of the players
 	And I should be able to input another player
