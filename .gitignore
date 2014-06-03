@@ -13,4 +13,10 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+npm-debug.log
 /tmp
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components

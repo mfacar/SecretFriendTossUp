@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -43,6 +44,9 @@ gem 'twitter-bootstrap-rails'
 gem 'thin'
 gem 'jquery-turbolinks'
 gem 'jquery-validation-rails'
+gem 'rails-assets-bootstrap'
+gem 'rails-assets-angular'
+gem 'angularjs-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'

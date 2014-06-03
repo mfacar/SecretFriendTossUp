@@ -1,2 +1,11 @@
-<h1>Bienvenido al Amigo Secreto</h1>
+<h1>Bienvenido al Amigo Secreto {{ 1 + 1 }}</h1>
+<div ng-controller="PlayerCtrl">
+
 <p>Crea tu intercambio de regalos!</p>
+  <ul>
+    <li ng-repeat="phone in phones">
+      {{phone.name}}
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+</div>
